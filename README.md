@@ -21,15 +21,16 @@ In particular, the numerical experiments investigate two quantities:
 The corresponding infinite-discrete Parseval-type identities are
 
 $$
-a_0=\frac{1}{2}\sum_{j=0}^{\infty}\operatorname{AVAR}_y[2^j]
+a_0 = \frac{1}{2}\sum_{j=0}^{\infty}\mathrm{AVAR}_y[2^j]
 $$
 
 and
 
 $$
-b_0=\lim_{M\to\infty}\frac{1}{3M}
-\sum_{m=1}^{M}m^2\operatorname{AVAR}_y[m].
+b_0 = \lim_{M\to\infty}\frac{1}{3M}
+\sum_{m=1}^{M}m^2\mathrm{AVAR}_y[m]
 $$
+
 
 The numerical experiments compare estimates obtained through AVAR inversion with estimates obtained through direct autocorrelation and with theoretical values.
 
