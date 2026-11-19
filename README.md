@@ -108,7 +108,7 @@ MATLAB compatibility has not been systematically verified.
 Download or clone the repository:
 
 ```bash
-git clone <REPOSITORY_URL>
+git clone https://github.com/victormd0/Allav-Variance-Parseval-Theorem-Codes.git
 ```
 
 Open GNU Octave and navigate to the repository directory.
