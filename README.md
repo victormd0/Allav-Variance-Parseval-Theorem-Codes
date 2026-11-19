@@ -15,21 +15,21 @@ The repository focuses on the continuous-time and infinite-discrete theoretical 
 
 In particular, the numerical experiments investigate two quantities:
 
-- \(a_0\): the power of the increment sequence \(y[k]=x[k+1]-x[k]\).
-- \(b_0\): the power of the original sequence \(x[k]\).
+- $a_0$: the power of the increment sequence $y[k]=x[k+1]-x[k]$.
+- $b_0$: the power of the original sequence $x[k]$.
 
 The corresponding infinite-discrete Parseval-type identities are
 
-\[
+$$
 a_0=\frac{1}{2}\sum_{j=0}^{\infty}\operatorname{AVAR}_y[2^j]
-\]
+$$
 
 and
 
-\[
+$$
 b_0=\lim_{M\to\infty}\frac{1}{3M}
 \sum_{m=1}^{M}m^2\operatorname{AVAR}_y[m].
-\]
+$$
 
 The numerical experiments compare estimates obtained through AVAR inversion with estimates obtained through direct autocorrelation and with theoretical values.
 
@@ -52,12 +52,12 @@ The numerical experiments compare estimates obtained through AVAR inversion with
 | `Test_power_law.m` | Tests the power-law signal generator. |
 | `Test_AVAR_y_gen.m` | Tests Allan variance calculations for generated frequency signals. |
 | `Test_AVAR_x_gen.m` | Tests Allan variance calculations for generated time-error signals. |
-| `Test_a_values_y_gen.m` | Tests AVAR-based estimation of the coefficients \(a_n\). |
-| `Test_b_values_x_gen.m` | Tests AVAR-based estimation of the coefficients \(b_n\). |
-| `Test_a_histogram_y_gen.m` | Compares distributions of AVAR-based and autocorrelation-based estimates of \(a_0\). |
-| `Test_b_histogram_x_gen.m` | Compares distributions of AVAR-based and autocorrelation-based estimates of \(b_0\). |
-| `Test_a_values_y_vs_N.m` | Investigates the dependence of the \(a_n\) estimates on record length. |
-| `Test_b_values_x_vs_N.m` | Investigates the dependence of the \(b_n\) estimates on record length. |
+| `Test_a_values_y_gen.m` | Tests AVAR-based estimation of the coefficients $a_n$. |
+| `Test_b_values_x_gen.m` | Tests AVAR-based estimation of the coefficients $b_n$. |
+| `Test_a_histogram_y_gen.m` | Compares distributions of AVAR-based and autocorrelation-based estimates of $a_0$. |
+| `Test_b_histogram_x_gen.m` | Compares distributions of AVAR-based and autocorrelation-based estimates of $b_0$. |
+| `Test_a_values_y_vs_N.m` | Investigates the dependence of the $a_n$ estimates on record length. |
+| `Test_b_values_x_vs_N.m` | Investigates the dependence of the $b_n$ estimates on record length. |
 
 ## Numerical validation
 
@@ -65,13 +65,13 @@ The experiments accompanying the paper consider three power-law spectral models:
 
 | Spectral exponent | Noise type | PSD behavior |
 |---|---|---|
-| \(\alpha=0\) | White noise | \(S(f)\propto f^0\) |
-| \(\alpha=1\) | Blue noise | \(S(f)\propto f^1\) |
-| \(\alpha=2\) | Violet noise | \(S(f)\propto f^2\) |
+| $\alpha=0$ | White noise | $S(f)\propto f^0$ |
+| $\alpha=1$ | Blue noise | $S(f)\propto f^1$ |
+| $\alpha=2$ | Violet noise | $S(f)\propto f^2$ |
 
 ### Distribution of the estimates
 
-For each spectral model, \(K=100\) independent realizations of length \(N=2^{10}=1024\) are generated.
+For each spectral model, $K=100$ independent realizations of length $N=2^{10}=1024$ are generated.
 
 The resulting estimates are compared through:
 
@@ -83,14 +83,14 @@ The resulting estimates are compared through:
 
 ### Dependence on record length
 
-The convergence experiments use \(K=100\) independent realizations for each record length.
+The convergence experiments use $K=100$ independent realizations for each record length.
 
 The investigated ranges are:
 
-- **\(a_0\):** \(N=2^8,2^9,\ldots,2^{20}\).
-- **\(b_0\):** \(N=2^8,2^9,\ldots,2^{15}\).
+- **$a_0$:** $N=2^8,2^9,\ldots,2^{20}$.
+- **$b_0$:** $N=2^8,2^9,\ldots,2^{15}$.
 
-The smaller maximum record length for \(b_0\) is due to the computational cost of the corresponding numerical estimator, rather than a theoretical restriction.
+The smaller maximum record length for $b_0$ is due to the computational cost of the corresponding numerical estimator, rather than a theoretical restriction.
 
 ## Requirements
 
@@ -129,7 +129,7 @@ avar = AVAR_values_x(x, 1:floor((N-1)/2));
 b = b_values_x(x, 0);
 ```
 
-The exact arguments and computational requirements depend on the function being used. Larger record lengths, particularly in the experiments involving \(b_0\), may require substantial execution time.
+The exact arguments and computational requirements depend on the function being used. Larger record lengths, particularly in the experiments involving $b_0$, may require substantial execution time.
 
 ## Reproducibility
 
